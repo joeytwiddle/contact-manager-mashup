@@ -2,6 +2,7 @@ window.ContactManager = {
   Models: {},
   Collections: {},
   Views: {},
+  ReactViews: {},
 
   start: function(data) {
     var contacts = new ContactManager.Collections.Contacts(data.contacts),
@@ -19,7 +20,20 @@ window.ContactManager = {
         collection: contacts
       });
 
-      $('.main-container').html(contactsView.render().$el);
+      //$('.main-container').html(contactsView.render().$el);
+
+      // I know this is naughty; we should persist the element rather than create it new each time.
+      // In fact I think react might re-render it automatically...
+
+      var reactContactsViewInstance = React.createElement(
+        ContactManager.ReactViews.Contacts,
+        { contacts: contacts }
+      );
+
+      ReactDOM.render( reactContactsViewInstance, $('.main-container')[0] );
+
+      //var html = $('.main-container').html();
+      //console.log("[app.js] html:", html);
     });
 
     router.on('route:newContact', function() {
