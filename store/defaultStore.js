@@ -1,3 +1,7 @@
+// I know that the state of this app is really just the 'contacts' but it makes
+// sense to put them within a larger 'state' object, to make it easier to add
+// more data to the state in future, if desired.
+
 const defaultContactsStore = {
   contacts: [
     {
