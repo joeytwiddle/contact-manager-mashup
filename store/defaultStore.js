@@ -43,4 +43,15 @@ const defaultContactsStore = {
   ]
 }
 
+// Placeholder for a true model
+class ContactModel {
+  initialize() {
+    this.avatar = (1 + Math.floor(Math.random() * 15)) + '.jpg'
+  }
+}
+
+defaultContactsStore.contacts.forEach(function (contact) {
+  ContactModel.prototype.initialize.call(contact)
+});
+
 export default defaultContactsStore
