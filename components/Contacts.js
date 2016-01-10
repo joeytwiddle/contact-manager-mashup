@@ -7,7 +7,7 @@ class Contact extends Component {
     //console.log("[Contacts.js:Contact::render()] this:", this);
     let contact = this.props.contact
     return (
-      <div>
+      <li className="media col-md-6 col-lg-4">
         <div className="thumbnail">
           <img className="media-object" src="app/img/faces/{ contact.avatar }" />
         </div>
@@ -31,7 +31,7 @@ class Contact extends Component {
           </dl>
         </div>
         <hr />
-      </div>
+      </li>
     )
   }
 }
