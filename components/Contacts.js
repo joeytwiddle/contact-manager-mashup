@@ -51,7 +51,7 @@ class Contacts extends Component {
           {
             // TODO: Nobody knows why we have contactception here
             state.contacts.contacts.map( contact =>
-              <Contact contact={contact} />
+              <Contact key={contact.id} contact={contact} />
             )
           }
         </ul>
