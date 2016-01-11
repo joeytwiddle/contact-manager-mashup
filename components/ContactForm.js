@@ -11,19 +11,19 @@ class ContactForm extends Component {
           <div className="form-group">
             <label className="col-sm-4 control-label">Full name:</label>
             <div className="col-sm-6">
-              <input type="text" className="form-control contact-name-input" value="{ contact.name }">
+              <input type="text" className="form-control contact-name-input" value="{ contact.name }" />
             </div>
           </div>
           <div className="form-group">
             <label className="col-sm-4 control-label">Email address:</label>
             <div className="col-sm-6">
-              <input type="email" className="form-control contact-email-input" value="{ contact.email }">
+              <input type="email" className="form-control contact-email-input" value="{ contact.email }" />
             </div>
           </div>
           <div className="form-group">
             <label className="col-sm-4 control-label">Telephone number:</label>
             <div className="col-sm-6">
-              <input type="tel" className="form-control contact-tel-input" value="{ contact.tel }">
+              <input type="tel" className="form-control contact-tel-input" value="{ contact.tel }" />
             </div>
           </div>
           <div className="form-group">
