@@ -9,7 +9,7 @@ class Contact extends Component {
     return (
       <li className="media col-md-6 col-lg-4">
         <div className="thumbnail">
-          <img className="media-object" src={`/app/img/faces/${contact.avatar}`} />
+          <img className="media-object" src={`/app/img/faces/${contact.avatar}`}/>
         </div>
         <div className="media-heading">
           <h3>
@@ -31,7 +31,7 @@ class Contact extends Component {
             <dd>{ contact.email }</dd>
           </dl>
         </div>
-        <hr />
+        <hr/>
       </li>
     )
   }
