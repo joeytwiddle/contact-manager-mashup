@@ -4,8 +4,16 @@ import Contact from './Contact'
 import { pushPath } from 'redux-simple-router'
 
 class Contacts extends Component {
+  /*
+  constructor(options) {
+    console.log("[Contacts.js] constructor options:", options);
+    super(options)
+  }
+  */
   render() {
-    const { state } = this.props
+    const { state, dispatch } = this.props
+    console.log("[Contacts.js] this.props:", this.props);
+    //console.log("[Contacts.js] this.props.dispatch:", this.props.dispatch);
     //console.log("[Contacts.js] state:", state);
     // mapDispatchToProps has also put all of our dispatch functions into this.props?
     return (
@@ -13,7 +21,8 @@ class Contacts extends Component {
         <h2 className="page-header text-center">List of contacts</h2>
         <p className="text-center">
           <a href="#contacts/new" className="btn btn-lg btn-outline">Add Contact</a>
-          <a onClick={() => dispatch(pushPath('/#contacts/new'))} className="btn btn-lg btn-outline">Add Contact (pushPath)</a>
+          <a href="/contacts/new" className="btn btn-lg btn-outline">(Link)</a>
+          <a onClick={() => dispatch(pushPath('/contacts/new'))} className="btn btn-lg btn-outline">(pushPath)</a>
         </p>
         <ul className="media-list row contacts-container">
           {

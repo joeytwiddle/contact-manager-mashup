@@ -13,15 +13,14 @@ import { syncReduxAndRouter } from 'redux-simple-router'
 const store = configureStore()
 
 const history = createHistory()
+//const middleware = syncHistory(history);
 syncReduxAndRouter(history, store)
 
 render(
   <Provider store={store}>
     <Router history={history}>
-      <Route path="/" component={App}>
-        <Route path="#contacts" component={Contacts}/>
-        <Route path="#contacts/new" component={ContactForm}/>
-      </Route>
+      <Route path="/" component={Contacts}/>
+      <Route path="/contacts/new" component={ContactForm}/>
     </Router>
   </Provider>,
   document.getElementById('root')
