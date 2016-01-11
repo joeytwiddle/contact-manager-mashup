@@ -43,4 +43,8 @@ class ContactForm extends Component {
   }
 }
 
+// TODO
+ContactForm.propTypes = {
+}
+
 export default ContactForm

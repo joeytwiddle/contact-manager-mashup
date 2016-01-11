@@ -49,6 +49,7 @@ class Contacts extends Component {
 
 Contacts.propTypes = {
   state: PropTypes.object.isRequired
+  // TODO
   /*
   increment: PropTypes.func.isRequired,
   incrementIfOdd: PropTypes.func.isRequired,

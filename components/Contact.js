@@ -37,4 +37,8 @@ class Contact extends Component {
   }
 }
 
+// TODO
+Contact.propTypes = {
+}
+
 export default Contact
