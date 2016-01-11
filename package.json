@@ -17,10 +17,13 @@
   },
   "homepage": "http://rackt.github.io/redux",
   "dependencies": {
+    "history": "^1.17.0",
     "react": "^0.14.0",
     "react-dom": "^0.14.0",
     "react-redux": "^4.0.0",
+    "react-router": "^1.0.3",
     "redux": "^3.0.0",
+    "redux-simple-router": "^1.0.2",
     "redux-thunk": "^0.1.0"
   },
   "devDependencies": {
