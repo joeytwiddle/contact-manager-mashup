@@ -1,6 +1,6 @@
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import Contacts from '../components/Contacts'
+import App from '../components/App'
 import * as ContactActions from '../actions/contacts'
 
 function mapStateToProps(state) {
@@ -15,4 +15,4 @@ function mapDispatchToProps(dispatch) {
   return boundActionCreators
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Contacts)
+export default connect(mapStateToProps, mapDispatchToProps)(App)
