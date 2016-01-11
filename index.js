@@ -2,7 +2,7 @@ import React from 'react'
 import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 //TODO: Extract routes into a routes.js/jsx file
-import App from './containers/App'
+//import App from './containers/App'
 import Contacts from './containers/Contacts'
 import NewContactForm from './containers/NewContactForm'
 import EditContactForm from './containers/EditContactForm'
@@ -22,12 +22,10 @@ syncReduxAndRouter(history, store)
 render(
   <Provider store={store}>
     <Router history={history}>
-      <Route path="/" component={App}>
-        <Redirect path="/" to="/contacts"/>
-        <Route path="/contacts" components={{showComponent: Contacts}}/>
-        <Route path="/contacts/new" components={{showComponent: NewContactForm}}/>
-        <Route path="/contacts/edit/:contactId" components={{showComponent: EditContactForm}} experiment="TEST"/>
-      </Route>
+      <Redirect path="/" to="/contacts"/>
+      <Route path="/contacts" component={Contacts}/>
+      <Route path="/contacts/new" component={NewContactForm}/>
+      <Route path="/contacts/edit/:contactId" component={EditContactForm} experiment="TEST"/>
     </Router>
   </Provider>,
   document.getElementById('root')
