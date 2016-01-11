@@ -15,7 +15,7 @@ function logUpdates(state = {}, action) {
 }
 
 const rootReducer = combineReducers({
-  contacts,
+  data: contacts,
   routing: routeReducer,
   logUpdates
 })

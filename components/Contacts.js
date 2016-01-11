@@ -26,9 +26,8 @@ class Contacts extends Component {
         </p>
         <ul className="media-list row contacts-container">
           {
-            // TODO: Nobody knows why we have contactception here
-            state.contacts.contacts.map( contact =>
-              <Contact key={contact.id} contact={contact} />
+            state.data.contacts.map( contact =>
+              <Contact key={contact.id} contact={contact} dispatch={dispatch} />
             )
           }
         </ul>
