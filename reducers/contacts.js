@@ -4,6 +4,7 @@ import defaultContactsStore from '../store/defaultStore'
 
 export default function contacts(state = defaultContactsStore, action) {
   console.log("[reducers/contacts.js] state:", state);
+  console.log("[reducers/contacts.js] action:", action);
   switch (action.type) {
     case ADD_CONTACT:
       // Inefficient!
