@@ -11,12 +11,12 @@ var compiler = webpack(config)
 app.use(webpackDevMiddleware(compiler, { noInfo: true, publicPath: config.output.publicPath }))
 app.use(webpackHotMiddleware(compiler))
 
+app.use('/vendor', express.static(__dirname + '/vendor'))
+app.use('/app', express.static(__dirname + '/app'))
+
 app.get("/", function(req, res) {
   res.sendFile(__dirname + '/index.html')
 })
-
-app.use('/vendor', express.static(__dirname + '/vendor'))
-app.use('/app', express.static(__dirname + '/app'))
 
 app.listen(port, function(error) {
   if (error) {

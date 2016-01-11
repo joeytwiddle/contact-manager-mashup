@@ -13,6 +13,7 @@ class Contacts extends Component {
         <h2 className="page-header text-center">List of contacts</h2>
         <p className="text-center">
           <a href="#contacts/new" className="btn btn-lg btn-outline">Add Contact</a>
+          <a onClick={() => dispatch(pushPath('/#contacts/new'))} className="btn btn-lg btn-outline">Add Contact (pushPath)</a>
         </p>
         <ul className="media-list row contacts-container">
           {
