@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import Contact from './Contact'
-import { pushPath } from 'redux-simple-router'
+import { Link } from 'react-router'
+//import { pushPath } from 'redux-simple-router'
 
 class Contacts extends Component {
   /*
@@ -19,9 +20,7 @@ class Contacts extends Component {
       <div>
         <h2 className="page-header text-center">List of contacts</h2>
         <p className="text-center">
-          <a href="#contacts/new" className="btn btn-lg btn-outline">Add Contact</a>
-          <a href="/contacts/new" className="btn btn-lg btn-outline">(Link)</a>
-          <a onClick={() => dispatch(pushPath('/contacts/new'))} className="btn btn-lg btn-outline">(pushPath)</a>
+          <Link to="/contacts/new" className="btn btn-lg btn-outline">Add Contact</Link>
         </p>
         <ul className="media-list row contacts-container">
           {
@@ -32,6 +31,7 @@ class Contacts extends Component {
         </ul>
       </div>
     )
+    // <a onClick={() => dispatch(pushPath('/contacts/new'))} className="btn btn-lg btn-outline">(pushPath)</a>
   }
 }
 

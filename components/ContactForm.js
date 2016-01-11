@@ -33,7 +33,6 @@ class ContactForm extends Component {
               <button type="submit" className="btn btn-outline btn-lg btn-block">Submit</button>
             </div>
             <div className="col-sm-3">
-              <a href="/contacts" className="btn btn-outline btn-lg btn-block">Cancel</a>
               <Link to="/contacts" className="btn btn-outline btn-lg btn-block">Cancel</Link>
             </div>
           </div>

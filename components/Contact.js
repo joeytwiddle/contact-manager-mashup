@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react'
-import { pushPath } from 'redux-simple-router'
+import { Link } from 'react-router'
 
 class Contact extends Component {
   render() {
@@ -15,11 +15,12 @@ class Contact extends Component {
           <h3>
             { contact.name }
             <small>
-              <a href={`/contacts/edit/${contact.id}`}><span className="glyphicon glyphicon-pencil"></span></a>
-              <a href='#' onClick={() => dispatch(pushPath(`/contacts/edit/${contact.id}`))}><span className="glyphicon glyphicon-pencil"></span></a>
-              <a href={`/contacts/delete/${contact.id}`} className="delete-contact">
+              <Link to={`/contacts/edit/${contact.id}`}>
+                <span className="glyphicon glyphicon-pencil"></span>
+              </Link>
+              <Link to={`/contacts/delete/${contact.id}`} className="delete-contact">
                 <span className="glyphicon glyphicon-trash"></span>
-              </a>
+              </Link>
             </small>
           </h3>
         </div>
