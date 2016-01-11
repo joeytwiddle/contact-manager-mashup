@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react'
-import Link from 'react-router'
+import { Link } from 'react-router'
 
 class ContactForm extends Component {
   render() {
@@ -34,11 +34,11 @@ class ContactForm extends Component {
             </div>
             <div className="col-sm-3">
               <a href="/contacts" className="btn btn-outline btn-lg btn-block">Cancel</a>
+              <Link to="/contacts" className="btn btn-outline btn-lg btn-block">Cancel</Link>
             </div>
           </div>
         </form>
       </div>
-      // <Link to="/contacts" className="btn btn-outline btn-lg btn-block">Cancel</Link>
     )
   }
 }
