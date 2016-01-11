@@ -59,10 +59,10 @@ class ContactForm extends Component {
           </div>
           <div className="form-group">
             <div className="col-sm-offset-4 col-sm-3">
-              <button type="submit" className="btn btn-outline btn-lg btn-block">Submit</button>
+              <Link to="/contacts" className="btn btn-lg btn-link pull-right">Cancel</Link>
             </div>
             <div className="col-sm-3">
-              <Link to="/contacts" className="btn btn-outline btn-lg btn-block">Cancel</Link>
+              <button type="submit" className="btn btn-lg btn-block btn-primary">Submit</button>
             </div>
           </div>
         </form>
