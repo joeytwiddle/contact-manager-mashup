@@ -21,6 +21,7 @@ render(
     <Router history={history}>
       <Route path="/" component={Contacts}/>
       <Route path="/contacts/new" component={ContactForm}/>
+      <Route path="/contacts/edit/:contactId" component={ContactForm}/>
     </Router>
   </Provider>,
   document.getElementById('root')

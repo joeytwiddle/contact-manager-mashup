@@ -1,10 +1,11 @@
 import React, { Component, PropTypes } from 'react'
+import { pushPath } from 'redux-simple-router'
 
 class Contact extends Component {
   render() {
-    //console.log("[Contacts.js:Contact::render()] contact:", contact);
-    //console.log("[Contacts.js:Contact::render()] this:", this);
-    let contact = this.props.contact
+    let { contact, dispatch } = this.props
+    //console.log("[Contact.js] contact:", contact);
+    //console.log("[Contact.js] dispatch:", dispatch);
     return (
       <li className="media col-md-6 col-lg-4">
         <div className="thumbnail">
@@ -14,8 +15,9 @@ class Contact extends Component {
           <h3>
             { contact.name }
             <small>
-              <a href="#contacts/edit/{ contact.id }"><span className="glyphicon glyphicon-pencil"></span></a>
-              <a href="#contacts/delete/{ contact.id }" className="delete-contact">
+              <a href={`/contacts/edit/${contact.id}`}><span className="glyphicon glyphicon-pencil"></span></a>
+              <a onClick={() => dispatch(pushPath(`/contacts/edit/${contact.id}`))}><span className="glyphicon glyphicon-pencil"></span></a>
+              <a href={`/contacts/delete/${contact.id}`} className="delete-contact">
                 <span className="glyphicon glyphicon-trash"></span>
               </a>
             </small>

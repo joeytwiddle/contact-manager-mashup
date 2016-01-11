@@ -1,6 +1,5 @@
 import React, { Component, PropTypes } from 'react'
 import Contact from './Contact'
-
 import { pushPath } from 'redux-simple-router'
 
 class Contacts extends Component {
