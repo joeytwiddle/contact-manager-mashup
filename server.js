@@ -27,7 +27,7 @@ app.get("/contacts/edit/:id", function(req, res) {
 })
 */
 
-app.use("/", function(req, res) {
+app.get("*", function(req, res) {
   res.sendFile(__dirname + '/index.html')
 })
 

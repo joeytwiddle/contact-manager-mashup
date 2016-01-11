@@ -1,9 +1,8 @@
 import { connect } from 'react-redux'
 import ContactForm from '../components/ContactForm';
 
-// Function passed in to `connect` to subscribe to Redux store updates.
-// Any time it updates, mapStateToProps is called.
 function mapStateToProps(state) {
+  console.log("[ContactForm.js:mapStateToProps] state:", state);
   /*
   return {
     contactIndex: state.indexOfContactSelectedForEditing,

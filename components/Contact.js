@@ -9,14 +9,14 @@ class Contact extends Component {
     return (
       <li className="media col-md-6 col-lg-4">
         <div className="thumbnail">
-          <img className="media-object" src={"app/img/faces/" + contact.avatar} />
+          <img className="media-object" src={`/app/img/faces/${contact.avatar}`} />
         </div>
         <div className="media-heading">
           <h3>
             { contact.name }
             <small>
               <a href={`/contacts/edit/${contact.id}`}><span className="glyphicon glyphicon-pencil"></span></a>
-              <a onClick={() => dispatch(pushPath(`/contacts/edit/${contact.id}`))}><span className="glyphicon glyphicon-pencil"></span></a>
+              <a href='#' onClick={() => dispatch(pushPath(`/contacts/edit/${contact.id}`))}><span className="glyphicon glyphicon-pencil"></span></a>
               <a href={`/contacts/delete/${contact.id}`} className="delete-contact">
                 <span className="glyphicon glyphicon-trash"></span>
               </a>

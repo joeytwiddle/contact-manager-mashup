@@ -1,9 +1,11 @@
 import React, { Component, PropTypes } from 'react'
+import Link from 'react-router'
 
 class ContactForm extends Component {
   render() {
+    console.log("[ContactForm.js] this.props:", this.props);
     let isNew = this.props.isNew
-    let contact = this.props.contact
+    let contact = this.props.contact || {}
     return (
       <div>
         <h2 className="page-header text-center">{ isNew ? 'Create' : 'Edit' } Contact</h2>
@@ -31,11 +33,12 @@ class ContactForm extends Component {
               <button type="submit" className="btn btn-outline btn-lg btn-block">Submit</button>
             </div>
             <div className="col-sm-3">
-              <a href="#contacts" className="btn btn-outline btn-lg btn-block">Cancel</a>
+              <a href="/contacts" className="btn btn-outline btn-lg btn-block">Cancel</a>
             </div>
           </div>
         </form>
       </div>
+      // <Link to="/contacts" className="btn btn-outline btn-lg btn-block">Cancel</Link>
     )
   }
 }
