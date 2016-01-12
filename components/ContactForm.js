@@ -19,6 +19,8 @@ const ContactForm = React.createClass({
   },
 
   componentDidMount: function() {
+    // Put keyboard focus on the first element, so the user can start typing
+    document.querySelector("form input").focus()
   },
 
   componentWillUnmount: function() {
