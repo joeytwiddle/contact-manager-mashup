@@ -8,9 +8,11 @@ export default function contacts(state = defaultContactsStore, action) {
   switch (action.type) {
     case ADD_CONTACT:
       // Inefficient!
-      let largestId = Math.max.apply(Math, state.contacts.map( contact => contact.id ) )
-      let nextId = largestId + 1
-      let newContact = {
+      const largestId = Math.max.apply(Math, state.contacts.map( contact => contact.id ) )
+      // In case largestId is -Infinity because contacts DB was empty
+      const largestIdFixed = Math.max(largestId, 0)
+      const nextId = largestIdFixed + 1
+      const newContact = {
         ...action.newProperties,
         id: nextId
       }
