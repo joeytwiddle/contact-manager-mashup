@@ -1,4 +1,3 @@
-import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import ContactForm from '../components/ContactForm';
 import { modifyContact } from '../actions/contacts.js'
@@ -15,7 +14,6 @@ function mapStateToProps(state) {
   const contact = _.find(state.data.contacts, (contact) => contact.id === contactId)
 
   return {
-    //state: state,
     contact: contact,
     isNew: false
   }
@@ -30,13 +28,6 @@ function onSubmitCallback(newContactDetails, props) {
 const actions = {
   onSubmitCallback
 }
-
-/*
-function mapDispatchToProps(dispatch) {
-  return bindActionCreators(actions, dispatch)
-}
-export default connect(mapStateToProps, mapDispatchToProps)(ContactForm)
-*/
 
 export default connect(mapStateToProps, {
   onSubmitCallback
