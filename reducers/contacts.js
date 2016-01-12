@@ -22,7 +22,7 @@ export default function contacts(state = defaultContactsStore, action) {
       return {
         ...state,
         contacts: state.contacts.map( contact => {
-          return contact.id === action.id
+          return contact.id === action.contactId
             ? {
                 id: contact.id,
                 ...action.newProperties

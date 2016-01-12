@@ -12,6 +12,7 @@ export function addContact(values) {
 export function modifyContact(id, values) {
   return {
     type: MODIFY_CONTACT,
+    contactId: id,
     newProperties: values
   }
 }
