@@ -14,19 +14,6 @@ app.use(webpackHotMiddleware(compiler))
 app.use('/vendor', express.static(__dirname + '/vendor'))
 app.use('/app', express.static(__dirname + '/app'))
 
-/*
-// DONE: Catch all routes instead of specifying every route separately.
-app.get("/", function(req, res) {
-  res.sendFile(__dirname + '/index.html')
-})
-app.get("/contacts/new", function(req, res) {
-  res.sendFile(__dirname + '/index.html')
-})
-app.get("/contacts/edit/:id", function(req, res) {
-  res.sendFile(__dirname + '/index.html')
-})
-*/
-
 app.get("*", function(req, res) {
   res.sendFile(__dirname + '/index.html')
 })
