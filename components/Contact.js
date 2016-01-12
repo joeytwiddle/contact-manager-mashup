@@ -11,7 +11,16 @@ class Contact extends Component {
     let onClickDelete = (e) => {
       e.preventDefault()
       this.props.removeContact( this.props.contact.id )
-      // TODO: Show a popup: "Contact ___ deleted.  Click here to Undo."
+
+      // TODO: This is a prototype, it should be cleaned up!
+      // One existing issue is that the .popup-container can block things
+      // behind it from being clicked, when the message is visible, and when it
+      // is not.
+      var messageElem = document.getElementById('contact-deleted-warning-message');
+      messageElem.className = "notice-box warning smooth-show";
+      setTimeout(function () {
+        messageElem.className = "notice-box warning";
+      }, 4000);
     }
 
     return (
