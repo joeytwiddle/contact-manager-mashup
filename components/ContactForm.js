@@ -76,7 +76,7 @@ const ContactForm = React.createClass({
               <Link to="/contacts" className="btn btn-lg btn-link pull-right">Cancel</Link>
             </div>
             <div className="col-sm-3">
-              <button type="submit" className="btn btn-lg btn-block btn-primary">Submit</button>
+              <button type="submit" className="btn btn-lg btn-block btn-primary">{ isNew ? "Create" : "Update" }</button>
             </div>
           </div>
         </form>
