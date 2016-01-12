@@ -21,10 +21,10 @@ class ContactForm extends Component {
     // Because forms could also be submitted by user hitting <Enter> in one of the form inputs, or <Space> on the submit button.
     const onSubmit = (event) => {
       event.preventDefault()
-      console.log("[ContactForm.js] this:", this);
+      //console.log("[ContactForm.js] this:", this);
       let newContactDetails = this.state
-      console.log("[ContactForm.js] newContactDetails:", newContactDetails);
-      console.log("[ContactForm.js] this.props.dispatch:", this.props.dispatch);
+      //console.log("[ContactForm.js] newContactDetails:", newContactDetails);
+      //console.log("[ContactForm.js] this.props.dispatch:", this.props.dispatch);
 
       //dispatch( this.props.addContact(newContactDetails) )
       // It seems we don't need to dispatch, this is enough
