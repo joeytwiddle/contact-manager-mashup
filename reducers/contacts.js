@@ -14,6 +14,10 @@ export default function contacts(state = defaultContactsStore, action) {
         ...action.newProperties,
         id: nextId
       }
+
+      // TODO: This is WET.  We should extract the Contact Model from defaultStore are re-use it
+      newContact.avatar = newContact.avatar || (1 + Math.floor(Math.random() * 15)) + '.jpg'
+
       return {
         ...state,
         contacts: state.contacts.concat([ newContact ])
