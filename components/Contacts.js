@@ -5,7 +5,7 @@ import { Link } from 'react-router'
 class Contacts extends Component {
 
   render() {
-    const { state, dispatch } = this.props
+    const { state, dispatch, removeContact } = this.props
 
     return (
       <div>
@@ -16,7 +16,7 @@ class Contacts extends Component {
         <ul className="media-list row contacts-container">
           {
             state.data.contacts.map( contact =>
-              <Contact key={contact.id} contact={contact} dispatch={dispatch} />
+              <Contact key={contact.id} contact={contact} dispatch={dispatch} removeContact={removeContact}/>
             )
           }
         </ul>

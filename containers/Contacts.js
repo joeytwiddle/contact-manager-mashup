@@ -1,5 +1,6 @@
 import { connect } from 'react-redux'
 import Contacts from '../components/Contacts';
+import { removeContact } from '../actions/contacts.js'
 
 function mapStateToProps(state) {
   return {
@@ -7,4 +8,6 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps)(Contacts);
+export default connect(mapStateToProps, {
+  removeContact
+})(Contacts);
