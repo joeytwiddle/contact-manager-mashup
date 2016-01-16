@@ -59,4 +59,9 @@ class Contact extends Component {
 Contact.propTypes = {
 }
 
+// This is needed or won't see the store
+Contact.contextTypes = {
+  store: React.PropTypes.object
+}
+
 export default Contact
