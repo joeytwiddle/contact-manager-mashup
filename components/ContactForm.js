@@ -6,9 +6,10 @@ const ContactForm = React.createClass({
 
   onChangeHandlerFor: function (field) {
     return (event) => {
-      let value = event.target.value
-      let update = {}
-      update[field] = value
+      let { value } = event.target
+      let update = {
+        [field]: value
+      }
       this.setState(update);
     }
   },
