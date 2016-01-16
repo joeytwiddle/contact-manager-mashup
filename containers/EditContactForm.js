@@ -25,10 +25,6 @@ function onSubmitCallback(newContactDetails, props) {
   return modifyContact(contactId, newContactDetails)
 }
 
-const actions = {
-  onSubmitCallback
-}
-
 export default connect(mapStateToProps, {
   onSubmitCallback
 })(ContactForm)

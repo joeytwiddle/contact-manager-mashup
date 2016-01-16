@@ -1,3 +1,5 @@
+// CURRENTLY NOT USED
+
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import Contacts from '../components/Contacts'

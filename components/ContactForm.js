@@ -30,7 +30,7 @@ const ContactForm = React.createClass({
   render: function () {
     //console.log("[ContactForm.js] this.props:", this.props);
 
-    let { isNew, dispatch, onSubmitCallback } = this.props
+    let { isNew, onSubmitCallback } = this.props
 
     // It is better to listen for form 'submit' event than for a click on the submit button
     // Because forms could also be submitted by user hitting <Enter> in one of the form inputs, or <Space> on the submit button.

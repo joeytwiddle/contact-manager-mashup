@@ -20,13 +20,17 @@ const history = createHistory()
 //const middleware = syncHistory(history);
 syncReduxAndRouter(history, store)
 
+var unsubscribe = store.subscribe( () =>
+                                  console.log("Store was updated", store)
+                                 )
+
 render(
   <Provider store={store}>
     <Router history={history}>
       <Redirect path="/" to="/contacts"/>
       <Route path="/contacts" component={Contacts}/>
       <Route path="/contacts/new" component={NewContactForm}/>
-      <Route path="/contacts/edit/:contactId" component={EditContactForm} experiment="TEST"/>
+      <Route path="/contacts/edit/:contactId" component={EditContactForm}/>
     </Router>
   </Provider>,
   document.getElementById('root')
