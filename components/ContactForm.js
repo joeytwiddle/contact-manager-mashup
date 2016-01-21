@@ -4,14 +4,6 @@ import { Link } from 'react-router'
 //class ContactForm extends Component {
 const ContactForm = React.createClass({
 
-  onChangeHandlerFor: function (field) {
-    return (event) => {
-      this.setState({
-        [field]: event.target.value
-      });
-    }
-  },
-
   getInitialState: function() {
     console.log("[ContactForm.js] this:", this);
     return this.props.contact || {};
@@ -29,6 +21,11 @@ const ContactForm = React.createClass({
     //console.log("[ContactForm.js] this.props:", this.props);
 
     let { isNew, onSubmitCallback } = this.props
+
+    const onChangeHandlerFor = (field) => (event) =>
+      this.setState({
+        [field]: event.target.value
+      });
 
     // It is better to listen for form 'submit' event than for a click on the submit button
     // Because forms could also be submitted by user hitting <Enter> in one of the form inputs, or <Space> on the submit button.
@@ -55,19 +52,19 @@ const ContactForm = React.createClass({
           <div className="form-group">
             <label className="col-sm-4 control-label">Full name:</label>
             <div className="col-sm-6">
-              <input type="text" className="form-control contact-name-input" value={ this.state.name } onChange={this.onChangeHandlerFor('name')}/>
+              <input type="text" className="form-control contact-name-input" value={ this.state.name } onChange={onChangeHandlerFor('name')}/>
             </div>
           </div>
           <div className="form-group">
             <label className="col-sm-4 control-label">Email address:</label>
             <div className="col-sm-6">
-              <input type="email" className="form-control contact-email-input" value={ this.state.email } onChange={this.onChangeHandlerFor('email')}/>
+              <input type="email" className="form-control contact-email-input" value={ this.state.email } onChange={onChangeHandlerFor('email')}/>
             </div>
           </div>
           <div className="form-group">
             <label className="col-sm-4 control-label">Telephone number:</label>
             <div className="col-sm-6">
-              <input type="tel" className="form-control contact-tel-input" value={ this.state.tel } onChange={this.onChangeHandlerFor('tel')}/>
+              <input type="tel" className="form-control contact-tel-input" value={ this.state.tel } onChange={onChangeHandlerFor('tel')}/>
             </div>
           </div>
           <div className="form-group">
