@@ -76,7 +76,7 @@ const ContactForm = React.createClass({
           </div>
           <div className="form-group">
             <div className="col-sm-offset-4 col-sm-3">
-              <Link to="/contacts" className="btn btn-lg btn-link pull-right">Cancel</Link>
+              <Link to="/contacts" className="btn btn-lg btn-link pull-right">cancel</Link>
             </div>
             <div className="col-sm-3">
               <button type="submit" className="btn btn-lg btn-block btn-primary">{ isNew ? "Create" : "Update" }</button>
