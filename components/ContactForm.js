@@ -1,23 +1,30 @@
 import React, { Component, PropTypes } from 'react'
 import { Link } from 'react-router'
 
-//class ContactForm extends Component {
+class ContactForm extends Component {
+
+/*
 const ContactForm = React.createClass({
 
-  getInitialState: function() {
-    console.log("[ContactForm.js] this:", this);
-    return this.props.contact || {};
-  },
+  getInitialState () {
+    return { ...this.props.contact }
+  }
+*/
 
-  componentDidMount: function() {
+  constructor(props, context) {
+    super(props, context)
+    this.state = { ...this.props.contact }
+  }
+
+  componentDidMount () {
     // Put keyboard focus on the first element, so the user can start typing
     document.querySelector("form input").focus()
-  },
+  }
 
-  componentWillUnmount: function() {
-  },
+  componentWillUnmount () {
+  }
 
-  render: function () {
+  render () {
     //console.log("[ContactForm.js] this.props:", this.props);
 
     let { isNew, onSubmitCallback } = this.props
@@ -25,7 +32,7 @@ const ContactForm = React.createClass({
     const onChangeHandlerFor = (field) => (event) =>
       this.setState({
         [field]: event.target.value
-      });
+      })
 
     // It is better to listen for form 'submit' event than for a click on the submit button
     // Because forms could also be submitted by user hitting <Enter> in one of the form inputs, or <Space> on the submit button.
@@ -79,7 +86,7 @@ const ContactForm = React.createClass({
       </div>
     )
   }
-})
+}
 
 // TODO
 ContactForm.propTypes = {
